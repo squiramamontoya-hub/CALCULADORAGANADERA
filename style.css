@@ -1,0 +1,76 @@
+body{
+  margin:0;
+  font-family:'Segoe UI',sans-serif;
+  background-image:url('https://images.unsplash.com/photo-1500595046743-cd271d694d30');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color:white;
+}
+
+.app{
+  display:flex;
+  min-height:100vh;
+  background:rgba(0,0,0,0.75);
+}
+
+.sidebar{
+  width:220px;
+  background:rgba(0,0,0,0.85);
+  padding:20px;
+}
+
+.content{
+  flex:1;
+  padding:30px;
+}
+
+.card{
+  background:rgba(255,255,255,0.1);
+  padding:20px;
+  border-radius:15px;
+  margin-bottom:15px;
+}
+
+.hidden{display:none}
+
+button{
+  padding:10px;
+  margin:5px 0;
+  border:none;
+  border-radius:10px;
+  background:#2ecc71;
+  color:white;
+  cursor:pointer;
+}
+
+button:hover{
+  background:#27ae60;
+}
+
+.danger{
+  background:#e74c3c;
+}
+
+.chatbot{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#2ecc71;
+  padding:15px;
+  border-radius:50%;
+  cursor:pointer;
+}
+
+.chatbox{
+  position:fixed;
+  bottom:80px;
+  right:20px;
+  width:300px;
+  background:white;
+  color:black;
+  padding:10px;
+  border-radius:10px;
+  display:none;
+}

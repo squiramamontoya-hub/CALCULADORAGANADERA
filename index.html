@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Calculadora Ganadera PRO</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- LOGIN -->
+<div id="login" class="content">
+  <div class="card">
+    <h2>Inicio de Sesión</h2>
+    <input id="user" placeholder="Usuario">
+    <input id="pass" type="password" placeholder="Contraseña">
+    <button onclick="login()">Entrar</button>
+  </div>
+</div>
+
+<!-- APP -->
+<div id="app" class="app hidden">
+
+  <aside class="sidebar">
+    <h2>🐄 Ganadería</h2>
+    <button onclick="mostrar('dashboard')">Inicio</button>
+    <button onclick="mostrar('calculadora')">Calculadora</button>
+    <button onclick="mostrar('animales')">Animales</button>
+    <button onclick="mostrar('costos')">Costos</button>
+    <button onclick="mostrar('historial')">Historial</button>
+    <hr>
+    <button class="danger" onclick="logout()">Cerrar sesión</button>
+  </aside>
+
+  <main class="content">
+
+    <div class="topbar">
+      <h1>Panel Ganadero</h1>
+    </div>
+
+    <div id="dashboard" class="card">
+      <h3>Bienvenido</h3>
+      <p>Gestiona tu producción ganadera.</p>
+    </div>
+
+    <div id="calculadora" class="card hidden">
+      <h3>Calculadora</h3>
+      <input id="cantidad" type="number" placeholder="Cantidad">
+      <input id="peso" type="number" placeholder="Peso promedio">
+      <input id="precio" type="number" placeholder="Precio por kg">
+      <button onclick="calcular()">Calcular</button>
+      <p id="resultado"></p>
+    </div>
+
+    <div id="animales" class="card hidden">
+      <h3>Animales</h3>
+      <input id="tipo" placeholder="Tipo">
+      <input id="edad" type="number" placeholder="Edad">
+      <input id="pesoAnimal" type="number" placeholder="Peso">
+      <button onclick="guardarAnimal()">Guardar</button>
+      <ul id="listaAnimales"></ul>
+    </div>
+
+    <div id="costos" class="card hidden">
+      <h3>Costos</h3>
+      <input id="alimento" type="number" placeholder="Cantidad alimento">
+      <input id="precioAlimento" type="number" placeholder="Precio alimento">
+      <button onclick="calcularCosto()">Calcular</button>
+      <p id="totalCosto"></p>
+    </div>
+
+    <div id="historial" class="card hidden">
+      <h3>Historial</h3>
+      <button class="danger" onclick="limpiarHistorial()">🗑 Limpiar</button>
+      <ul id="listaHistorial"></ul>
+    </div>
+
+  </main>
+</div>
+
+<!-- CHATBOT -->
+<div class="chatbot" onclick="toggleChat()">💬</div>
+
+<div class="chatbox" id="chatbox">
+  <b>Asistente Ganadero</b>
+  <input id="chatInput" placeholder="Escribe tu pregunta...">
+  <button onclick="responder()">Enviar</button>
+  <p id="chatRespuesta"></p>
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
